@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="pagetitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFCB40</item>
+    </style>
+</resources>

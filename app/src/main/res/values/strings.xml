@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Let\'s_trip</string>
+    <string name="some_id">\u00EC\u0097\u00AC\u00ED\u0096\u0089\u00EC\u009D\u0084 \u00EC\u0096\u00B4\u00EB\u0094\u0094\u00EB\u00A1\u009C \u00EA\u00B0\u0080\u00EC\u008B\u009C\u00EB\u0082\u0098\u00EC\u009A\u0094?</string>
+    <string name="pagetitle">\u00E2\u0080\u0099s</string>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>
+
