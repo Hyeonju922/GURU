@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             if (isValidCredentials(username, password)) {
                 // 로그인 성공 처리
                 showToast("로그인 성공")
-                val intent2 = Intent(this, MainActivity::class.java)
+                val intent2 = Intent(this, HomeActivity::class.java)
                 startActivity(intent2)
                 // 여기에 원하는 화면으로 이동하는 코드를 추가할 수 있습니다.
             } else {

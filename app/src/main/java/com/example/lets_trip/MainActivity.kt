@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
         num1 = findViewById(R.id.num)
         name1 = findViewById(R.id.name)
         mPickTimeBtn = findViewById<ImageButton>(R.id.pickDateBtn)
-        textView     = findViewById<TextView>(R.id.dateTv)
+        textView = findViewById<TextView>(R.id.dateTv)
         mPickTimeBtn2 = findViewById<ImageButton>(R.id.pickDateBtn2)
-        textView2     = findViewById<TextView>(R.id.dateTv2)
+        textView2 = findViewById<TextView>(R.id.dateTv2)
         moveButton = findViewById<Button>(R.id.moveButton)
         dbHelper = DBHelper(this)
 
@@ -44,41 +44,48 @@ class MainActivity : AppCompatActivity() {
         val month = c.get(Calendar.MONTH)
         val day = c.get(Calendar.DAY_OF_MONTH)
 
-        mPickTimeBtn.setOnClickListener {
-
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                textView.setText("" + year + "년 " + month + "월 " + dayOfMonth + "일 ")
-            }, year, month, day)
-            dpd.show()
-
-        }
-
-        mPickTimeBtn2.setOnClickListener {
-
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                textView2.setText("" + year + "년 " + month + "월 " + dayOfMonth + "일 ")
-            }, year, month, day)
-            dpd.show()
-
-        }
-
-        // 페이지 이동
-        fun moveToAnotherPage(){
-            val intent = Intent(this, PlanActivity::class.java)
-            startActivity(intent)
-        }
-
         val location = location1.text.toString()
         val departure = departure1.text.toString()
         val arrival = arrival1.text.toString()
         val num = num1.text.toString()
         val name = name1.text.toString()
 
-        // 함수호출
+
+        mPickTimeBtn.setOnClickListener {
+
+            val dpd = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                    textView.setText("" + year + "년 " + month + "월 " + dayOfMonth + "일 ")
+                },
+                year,
+                month,
+                day
+            )
+            dpd.show()
+
+        }
+
+        mPickTimeBtn2.setOnClickListener {
+
+            val dpd = DatePickerDialog(
+                this,
+                DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                    textView2.setText("" + year + "년 " + month + "월 " + dayOfMonth + "일 ")
+                },
+                year,
+                month,
+                day
+            )
+            dpd.show()
+
+        }
+
         moveButton.setOnClickListener{
             dbHelper.insertPlan(location, departure, arrival, num, name)
-            moveToAnotherPage()
+            val intent = Intent(this, PlanActivity::class.java)
+            startActivity(intent)
+
         }
     }
-
 }

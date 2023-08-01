@@ -1,6 +1,7 @@
 package com.example.lets_trip
 
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,6 +27,8 @@ class PlanActivity : AppCompatActivity() {
         val selectedTimeTextView1 = findViewById<TextView>(R.id.timeshow1)
         val btnShowTimePicker2 = findViewById<ImageButton>(R.id.timepicker2)
         val selectedTimeTextView2 = findViewById<TextView>(R.id.timeshow2)
+        val completeButton = findViewById<Button>(R.id.completeButton)
+        val homeButton = findViewById<ImageButton>(R.id.homebutton)
 
         btnShowTimePicker1.setOnClickListener {
             showTimePickerDialog(selectedTimeTextView1)
@@ -34,6 +37,17 @@ class PlanActivity : AppCompatActivity() {
         btnShowTimePicker2.setOnClickListener {
             showTimePickerDialog(selectedTimeTextView2)
         }
+
+        completeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+        homeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     fun setUpSpinner1(){
