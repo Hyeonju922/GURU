@@ -49,7 +49,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/locationButton"
+            android:id="@+id/locationText"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -192,6 +192,7 @@
             android:layout_gravity="center">
 
             <EditText
+                android:id="@+id/num"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -216,12 +217,13 @@
             android:layout_gravity="center">
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="right"
                 android:hint="친구 이름"
-                android:inputType="number"
+                android:inputType="text"
                 android:textSize="15sp" />
 
             <TextView

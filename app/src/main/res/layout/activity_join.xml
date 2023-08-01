@@ -54,7 +54,7 @@
 
         <LinearLayout
             android:layout_width="270dp"
-            android:layout_height="250dp"
+            android:layout_height="170dp"
             android:orientation="vertical"
             android:padding="10dp"
             android:layout_gravity="center"
@@ -68,6 +68,7 @@
                 android:text="아이디"/>
 
             <EditText
+                android:id="@+id/edit_id2"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:hint="아이디"
@@ -81,35 +82,36 @@
                 android:text="비밀번호"/>
 
             <EditText
+                android:id="@+id/edit_pw2"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
                 android:hint="비밀번호"/>
 
-            <TextView
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:padding="5dp"
-                android:text="비밀번호 확인"/>
-
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:hint="비밀번호 확인"/>
 
         </LinearLayout>
 
 
         <Button
+            android:id="@+id/btn_register2"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#DCECE6"
+            android:text="회원가입"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_login2"
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:text="회원가입"
+            android:text="로그인하러 가기"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:backgroundTint="#DCECE6" />
+            android:backgroundTint="#91D0B7" />
 
 
     </LinearLayout>
